@@ -1,3 +1,4 @@
+const CustomError = require("../helper/customError");
 const wrapAsync = require("../helper/wrapAsync");
 const db = require("../models");
 const Item = db.Item;
@@ -16,7 +17,7 @@ const addItem = wrapAsync(async (req, res) => {
 const getItemById = wrapAsync(async (req, res) => {
   const { id } = req.params;
   const item = await Item.findByPk(id);
-  if (!item) return res.status(404).json({ Error: "No item of this id" });
+  if (!item) throw new CustomError("Item not found", 404);
   res.status(200).json({ message: "Fetched successfully", data: item });
 });
 
@@ -33,7 +34,7 @@ const updateItemById = wrapAsync(async (req, res) => {
   const { id } = req.params;
   const { name, price, available } = req.body;
   const item = await Item.findByPk(id);
-  if (!item) return res.status(404).json({ Error: "No items with such id" });
+  if (!item) throw new CustomError("Item not found", 404);
   item.set({ name, price, available });
   await item.save();
   res.status(200).json({ message: "Successfullt Updated", data: item });

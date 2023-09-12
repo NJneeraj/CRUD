@@ -1,10 +1,19 @@
 const CustomError = require("../helper/customError");
 const wrapAsync = require("../helper/wrapAsync");
+const { Op } = require("sequelize");
 const db = require("../models");
 const Item = db.Item;
 
 const getAllItems = wrapAsync(async (req, res) => {
-  const items = await Item.findAll();
+  const { name, min, max } = req.query;
+  const filter = {};
+  if (name) filter.name = { [Op.iLike]: `%${name}%` };
+
+  if (min && max) filter.price = { [Op.between]: [min, max] };
+  else if (min) filter.price = { [Op.gte]: min };
+  else if (max) filter.price = { [Op.lte]: max };
+
+  const items = await Item.findAll({ where: filter });
   res.status(200).json({ message: "Fetched successfully", data: items });
 });
 

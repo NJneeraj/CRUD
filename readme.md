@@ -1,2 +1,4 @@
 #CRUD
-functionality for basic CRUD operations
+Postgres database
+Basic CRUD operations-GET,POST,PUT,DELETE
+Joi validation

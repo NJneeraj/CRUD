@@ -1,11 +1,17 @@
 const express = require("express");
+const {
+  getAllItems,
+  addItem,
+  getItemById,
+  deleteById,
+  updateItemById,
+} = require("../controllers/itemController");
+const { validateItem } = require("../middlewares/validateItem");
 const itemsRouter = express.Router();
 
-itemsRouter.get("/", (req, res) => {
-  res.send("All items are available");
-});
-itemsRouter.get("/:id", (req, res) => {
-  const { id } = req.params;
-  res.send(`${id} item is available`);
-});
+itemsRouter.get("/", getAllItems);
+itemsRouter.post("/", validateItem, addItem);
+itemsRouter.get("/:id", getItemById);
+itemsRouter.delete("/:id", deleteById);
+itemsRouter.put("/:id", validateItem, updateItemById);
 module.exports = itemsRouter;

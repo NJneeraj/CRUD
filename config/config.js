@@ -1,10 +1,10 @@
 module.exports = {
   development: {
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
+    username: process.env.DB_USERNAME || "username",
+    password: process.env.DB_PASSWORD || "password",
+    database: process.env.DB_DATABASE || "itemstore",
     host: process.env.DB_HOST,
-    dialect: process.env.DB_DIALECT,
+    dialect: "postgres",
   },
   test: {
     username: process.env.DB_USERNAME || "root",

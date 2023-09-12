@@ -6,7 +6,7 @@ function handleError(err, req, res, next) {
     logger.error(`Error Occured : ${err.message}`, { error: err });
     res.status(err.statusCode).json({ error: err.message });
   } else {
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Internal server error", msg: err.message });
   }
 }
 module.exports = handleError;

@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Classic Leather Wallet",
+    "price": 29.99,
+    "available": true
+  },
+  {
+    "name": "Stylish Sunglasses",
+    "price": 49.99,
+    "available": false
+  },
+  {
+    "name": "Vintage Fountain Pen",
+    "price": 19.95,
+    "available": true
+  },
+  {
+    "name": "Designer Wristwatch",
+    "price": 99.99,
+    "available": true
+  },
+  {
+    "name": "Handcrafted Leather Belt",
+    "price": 39.99,
+    "available": false
+  },
+  {
+    "name": "Silk Scarf",
+    "price": 24.99,
+    "available": true
+  },
+  {
+    "name": "Canvas Backpack",
+    "price": 59.95,
+    "available": true
+  },
+  {
+    "name": "Elegant Dress Shoes",
+    "price": 79.99,
+    "available": false
+  },
+  {
+    "name": "Cozy Blanket",
+    "price": 34.99,
+    "available": true
+  },
+  {
+    "name": "Bluetooth Headphones",
+    "price": 69.99,
+    "available": true
+  },
+  {
+    "name": "Gourmet Coffee Blend",
+    "price": 12.95,
+    "available": true
+  },
+  {
+    "name": "Artisanal Chocolate Box",
+    "price": 19.99,
+    "available": false
+  },
+  {
+    "name": "Smartphone Holder",
+    "price": 9.99,
+    "available": true
+  },
+  {
+    "name": "Ceramic Dinner Plates",
+    "price": 29.95,
+    "available": true
+  },
+  {
+    "name": "Wooden Desk Organizer",
+    "price": 14.99,
+    "available": true
+  },
+  {
+    "name": "Fancy Necktie",
+    "price": 17.99,
+    "available": false
+  },
+  {
+    "name": "Outdoor Hammock",
+    "price": 49.95,
+    "available": true
+  },
+  {
+    "name": "Scented Candles Set",
+    "price": 27.99,
+    "available": true
+  },
+  {
+    "name": "Cotton Bathrobe",
+    "price": 39.99,
+    "available": false
+  },
+  {
+    "name": "Digital Camera",
+    "price": 199.99,
+    "available": true
+  }
+]
